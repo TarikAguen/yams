@@ -1,0 +1,123 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$error-color: #e74c3c;
+$background-color: #ecf0f1;
+$text-color: #2c3e50;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //   background-image: url(../../public/asset/choco-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: $primary-color;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.3);
+    }
+  }
+
+  button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.3);
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  p.success-message {
+    background: $secondary-color;
+    color: white;
+  }
+
+  p.error-message {
+    background: $error-color;
+    color: white;
+    z-index: 99;
+  }
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: $primary-color;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

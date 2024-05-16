@@ -1,0 +1,101 @@
+.game-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+  }
+
+  .game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #ccc;
+      }
+
+      &.logout-button {
+        background-color: #e74c3c;
+        color: white;
+
+        &:hover {
+          background-color: #c0392b;
+        }
+      }
+    }
+  }
+
+  .rules-text,
+  .results-history {
+    background: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+
+    h2,
+    h3 {
+      color: #34495e;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .rolls-left {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .rolling-dice {
+    width: 100px; // Ajustez la taille selon vos besoins
+    height: 100px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .dice-results {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    .dice-image {
+      width: 50px; // Ajustez la taille selon vos besoins
+      height: 50px;
+    }
+  }
+}
